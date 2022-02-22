@@ -69,6 +69,22 @@ print("Solving this problem was possible thanks to \"number = 1 + 2 * 3 / 4.0\".
 print("let's do a remainder problem, which is done with \"remainder = number % number\".")
 remainder = 11 % 3
 print(remainder)
-print("let's do a problem where we use two multiplication cymbols that make a power relationship")
-print("we are gonna use \"squared = 7 ** 2\" for this problem. It will print out."
 
+print("A new story about a man who is on a programming adventure")
+name = "Peter"
+age = "12"
+print(f"Hello, my name is {name} and I'm {age} years old")
+
+mylist = [3, 5, 7]
+print(f"A list of numbers I need to find: {mylist}")
+
+astring = "Hello 3"
+astring2 = "Hello Peter"
+
+print("single quotes are ' '")
+
+print(len(astring))\
+
+print(astring.index("3"))
+
+print(astring.count("l"))
