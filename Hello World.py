@@ -86,5 +86,12 @@ print("single quotes are ' '")
 print(len(astring))\
 
 print(astring.index("3"))
-
 print(astring.count("l"))
+
+print(astring[3:7])
+print(astring[::-1])
+
+print(astring.upper())
+print (astring.lower())
+
+# Left off on Conditions section on learnpython.org
