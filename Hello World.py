@@ -132,3 +132,56 @@ print(x == y) # Prints out True
 print(x is y) # Prints out False
 
 # Left off on Loops on learnpython.org
+
+primes = [2, 3, 5, 7]
+for prime in primes:
+    print(prime)
+
+print("This is an example of looping that shows numbers from 0-5")
+for x in range(6):
+    print(x)
+
+print("This is another example that shows the numbers between 1-6")
+for x in range(2, 6):
+    print(x)
+
+print("Prints out 3,5,7")
+for x in range(3, 8, 2):
+    print(x)
+
+print("This is for the \"While\"loops operation.")
+count = 0
+while count < 5:
+    print(count)
+    count +=1 # This is the same as count = count + 1
+
+print("This is about the \"break\" and \"continue\" operations.")
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break
+
+print("This for the continue statements")
+for x in range(10):
+    if x % 2 == 0:
+        continue
+    print(x)
+    
+print("This is for the \"Else\" command in loops.")
+count=0
+while(count<5):
+    print(count)
+    count +=1
+else:
+    print("count value reached %d" %(count))
+
+for i in range(1, 10):
+    if(1%5==0):
+        break
+    print(i)
+else:
+    print("This is not printed because for loop is terminated because of break but not due to fail in condition.")
+
+# Left off on functions on learnpython.org
