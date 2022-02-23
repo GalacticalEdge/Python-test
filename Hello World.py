@@ -95,3 +95,40 @@ print(astring.upper())
 print (astring.lower())
 
 # Left off on Conditions section on learnpython.org
+
+print("Let's go over conditions! Let's start with numbers! We have E = 5 here, so let's see what the bottom outputs")
+e = 5
+print(e == 5) # Outputs true
+print(e == 3) # Outputs false
+print(e < 3) # Outputs false
+
+if name == "Peter" and age == "12":\
+    print("Your name is Peter and your age is 12")
+
+if name == "Peter" or name == "John":
+    print("Your name is either Peter or John")
+
+if name in ["Peter", "John"]:
+    print("Your name is either Peter or John")
+
+statement = True
+another_statement = False
+if statement is True:
+    print("That is correct")
+else:
+    print("That is incorrect")
+
+t = 10
+if t == 10:
+    print("t equals ten!")
+else:
+    print("t does not equal ten")
+
+# This is an operator
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+print(x == y) # Prints out True
+print(x is y) # Prints out False
+
+# Left off on Loops on learnpython.org
