@@ -184,4 +184,25 @@ for i in range(1, 10):
 else:
     print("This is not printed because for loop is terminated because of break but not due to fail in condition.")
 
-# Left off on functions on learnpython.org
+# Left off on functions on learnpython.org\
+
+print("This is about functions")
+
+# Define our 3 functions
+def my_function():
+    print("Hello From My Function!")
+
+def my_function_with_args(username, greeting):
+    print("Hello, %s, From My Function!, I wish you %s"%(username, greeting))
+
+def sum_two_numbers(a, b):
+    return a + b
+
+# print(a simple greeting)
+my_function()
+
+#prints - "Hello, John Doe, From My Function!, I wish you a great year!"
+my_function_with_args("John Doe", "a great year!")
+
+# after this line x will hold the value 3!
+x = sum_two_numbers(1,2)
