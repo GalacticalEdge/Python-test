@@ -206,3 +206,30 @@ my_function_with_args("John Doe", "a great year!")
 
 # after this line x will hold the value 3!
 x = sum_two_numbers(1,2)
+
+# Left off on Classes and Objects on learnpython.org
+
+print("We are getting into Classes and Objects!")
+class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class")
+
+myobjectx = MyClass()
+myobjecty = MyClass()
+
+myobjectx.variable
+
+print(myobjectx.variable)
+print(myobjecty.variable)
+
+class NumberHolder:
+
+    def __init__(self, number):
+        self.number = number
+
+var = NumberHolder(7)
+print(var.returnNumber()) # prints '7'
+
+# Left on dictionaries on learnpython.org
