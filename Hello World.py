@@ -229,7 +229,33 @@ class NumberHolder:
     def __init__(self, number):
         self.number = number
 
-var = NumberHolder(7)
-print(var.returnNumber()) # prints '7'
-
 # Left on dictionaries on learnpython.org
+
+print("We are in dictionaries now! In this example, we have a database of phone numbers")
+phonebook = {}
+phonebook["Scammer 1"] = 938477566
+phonebook["Scammer 2"] = 938377264
+phonebook["Scammer 3"] = 947662781
+print(phonebook)
+
+print("Here is another way we can do this")
+phonebook = {
+    "Scammer 1" : 938477566,
+    "Scammer 2" : 938377264,
+    "Scammer 3" : 947662781
+}
+print(phonebook)
+
+phonebook = {"Scammer 1" : 938477566,"Scammer 2" : 938377264,"Scammer 3" : 947662781}
+for name, number in phonebook.items():
+    print("Phone number of %s is %d" % (name, number))
+
+phonebook = {
+    "Scammer 1" : 938477566,
+    "Scammer 2" : 938377264,
+    "Scammer 3" : 947662781
+}
+del phonebook["Scammer 1"]
+print(phonebook)
+
+# Left off on Modules and Packages on learnpython.org
