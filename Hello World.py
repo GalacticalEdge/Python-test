@@ -258,4 +258,12 @@ phonebook = {
 del phonebook["Scammer 1"]
 print(phonebook)
 
-# Left off on Modules and Packages on learnpython.org
+print("We are exploring built-in modules")
+
+import foo.bar
+
+__init__.py
+
+__all__ = ["bar"]
+
+# Left off on Number Arrays
