@@ -278,4 +278,56 @@ bmi > 23
 
 bmi[bmi > 23]
 
-# Left off on Pandas Basics
+# Panda's basics are in a seperate file
+
+print("We are gonna day a lottery with a generator!")
+
+import random
+
+def lottery():
+    # returns 6 numbers between 1 and 40
+    for i in range(6):
+        yield random.randint(1,40)
+
+    # returns a 7th number between 1 and 15
+    yield random.randint(1, 15)
+
+for random_number in lottery():
+        print("And the next number is... %d!" %
+(random_number))
+
+print("Now we are getting into List Comprehensions!")
+sentence = "the quick brown fox jumps over the lazy dog"
+words = sentence.split()
+word_lengths = []
+for word in words:
+    if word !="the":
+        word_lengths.append(len(word))
+print(words)
+print(word_lengths)
+
+print("Here is a simplified process")
+sentence = "the quick brown fox jumps over the lazy dog"
+words = sentence.split()
+word_lengths = [len(word) for word in words if word != "the"]
+print(words)
+print(word_lengths)
+
+print("We are now in Lambda functions")
+def sum(a,b):
+    return a + b
+
+a = 1
+b = 2
+c = sum(a,b)
+print(c)
+
+print("To tell you what it ism it basically is \"You make a command once, you can do it again without copying it\".")
+your_function_name = lambda inputs : output
+a = 1
+b = 2
+sum = lambda x,y : x + y
+c = sum(a,b)
+print(c)
+
+# Left off on Multiple Function Arguments on learnpython.org
