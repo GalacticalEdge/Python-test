@@ -1,3 +1,6 @@
+def pandas():
+    import pandas as pd
+
 print("This is pandas basics")
 
 def my_function(pandas):
@@ -9,6 +12,3 @@ def my_function(pandas):
 
 brics = pd.DataFrame(dict)
 print(brics)
-
-def pandas():
-    import pandas as pd
