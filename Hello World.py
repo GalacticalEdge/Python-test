@@ -377,3 +377,46 @@ pattern = r"" # Your pattern here!
 test_email(pattern)
 
 # Left off on Exception Handling on learnpython.org!
+
+def do_stuff_with_number(n):
+    print(n)
+
+def catch_this():
+    the_list = (1, 2, 3, 4, 5)
+
+    for i in range(20):
+        try:
+            do_stuff_with_number(the_list[i])
+        except IndexError: # Raised when accessing a non-existing index of a list
+            do_stuff_with_number(0)
+
+catch_this()
+
+print(set("my name is Eric and Eric is my name".split()))
+
+a = set(["Jake", "John", "Eric"])
+print(a)
+b = set(["John", "Jill"])
+print(b)
+
+# To find out which members attended both events, you may use the "intersection" method:
+
+print(a.intersection(b))
+print(b.intersection(a))
+
+# To find out which members attended only one of the events, use the "symmetric_difference" method:
+print(a.symmetric_difference(b))
+print(b.symmetric_difference(a))
+
+# To find out which members attended only one event and not the other, use the "difference" method:
+print(a.difference(b))
+print(b.difference(a))
+
+# To receive a list of all participants, use the "union" method:
+
+print(a.union(b))
+
+# Left off on serialization on learnpython.org
+
+
+              
