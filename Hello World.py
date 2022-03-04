@@ -418,5 +418,157 @@ print(a.union(b))
 
 # Left off on serialization on learnpython.org
 
+import json
+json_string = json.dumps([1, 2, 3, "a", "b", "c"])
+print(json.loads(json_string))
 
-              
+import pickle
+pickled_string = pickle.dumps([1, 2, 3, "a", "b", "c"])
+print(pickle.loads(pickled_string))
+
+from functools import partial
+
+def multiply(x,y):
+    return x * y
+
+# create a new function that multiples by 2
+
+dbl = partial(multiply, 2)
+print(dbl(4))
+
+def transmit_to_space(message):
+    "This is the enclosing function"
+    def data_transmitter():
+        "The nested function"
+        print(message)
+
+    data_transmitter()
+
+print(transmit_to_space("Test message"))
+
+def print_msg(number):
+    def printer():
+        "Here we are using the nonlocal keyword"
+        nonlocal number
+        number = 3
+        print(number)
+    printer()
+    print(number)
+
+print_msg(9)
+
+def transmit_to_space(message):
+    "This is the enclosing function"
+    def data_transmitter():
+        "The nested function"
+        print(message)
+    return data_transmitter
+
+def transmit_to_space(message):
+    "This is the enclosing function"
+    def data_transmitter():
+        "The nested function"
+        print(message)
+    return data_transmitter
+
+fun2 = transmit_to_space("Burn the Sun!")
+fun2()
+
+def repeater(old_function):
+    def new_function(*args, **kwds):
+        old_function(*args, **kwds)
+        old_function(*args, **kwds)
+    return new_function
+
+def multiply(num1, num2):
+    print(num1 * num2)
+
+multiply(2, 3)
+6
+6
+
+def double_out(old_function):
+    def new_function(*args, ** kwds):
+        return 2 * old_function(*args, ** kwds)
+    return new_function
+
+def double_Ii(old_function):
+    def new_function(args):
+        return old_function(arg * 2)
+    return new_function
+
+def check(old_function):
+    def new_function(arg):
+        if arg < 0: raise (ValueError, "Negative Argument")
+        old_function(arg)
+    return new_function
+
+my_pets = ['alfred', 'tabitha', 'william', 'arla']
+uppered_pets = []
+
+for pet in my_pets:
+    pet_ = pet.upper()
+    uppered_pets.append(pet_)
+
+print(uppered_pets)
+
+uppered_pets = list(map(str.upper, my_pets))
+
+print(uppered_pets)
+
+circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
+
+result = list(map(round, circle_areas, range(1, 7)))
+
+print(result)
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [1, 2, 3, 4, 5]
+
+results = list(zip(my_strings, my_numbers))
+
+print (results)
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [1, 2, 3, 4, 5]
+
+results = list(map(lambda x, y: (x, y), my_strings, my_numbers))
+
+print(results)
+
+scores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65]
+
+def is_A_student(score):
+    return score > 75
+
+over_75 = list(filter(is_A_student, scores))
+
+print(over_75)
+
+dromes = ("demigod", "rewire", "madam", "freer", "anutforajaroftuna", "kiosk")
+
+palindromes = list(filter(lambda word: word == word[::-1], dromes))
+
+print(palindromes)
+
+from functools import reduce
+
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers)
+print(result)
+
+from functools import reduce
+
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers)
+print(result)
+
+# Finished Python basics! YIPPY!
